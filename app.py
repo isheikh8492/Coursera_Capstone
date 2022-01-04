@@ -17,6 +17,7 @@ for i in range(0, 10001, 1000):
 
 # Create a dash application
 app = dash.Dash(__name__)
+server = app.server
 
 # Create an app layout
 app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
@@ -107,4 +108,4 @@ def get_scatter_chart(site_dropdown_value, payload_slider_value):
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(debug=False)
